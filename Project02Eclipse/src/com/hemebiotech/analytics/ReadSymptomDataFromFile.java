@@ -37,6 +37,8 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		this.filepath = filepath;
 		}
 	
+
+
 	@Override
 	public ArrayList<String> GetSymptoms() {
 		ArrayList<String> result = new ArrayList<String>();
@@ -61,36 +63,8 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		return result;
 	}
 	
-
-
-	@Override
-	public  Map<String, Long> CountSymptomsOccurences() {
-		
-		Map<String,Long> countSymptomsOccurences=
-			
-		
-	GetSymptoms().stream().collect(Collectors.groupingByConcurrent(e->e, Collectors.counting()));
-		
-
-		
-
-	return countSymptomsOccurences;
-	
-
-
-	
-	}
-
-	@Override
-	public TreeMap<String, Long> NaturalOrder() {
-	
-		TreeMap<String, Long > naturalOrder = new TreeMap<String, Long>(CountSymptomsOccurences());
-		
-		return naturalOrder;
-	}
-
-
 }
+	
 
 
 		
