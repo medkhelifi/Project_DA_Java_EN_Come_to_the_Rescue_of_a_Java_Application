@@ -1,6 +1,6 @@
 package com.hemebiotech.analytics;
 
-import java.io.BufferedWriter;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.TreeMap;
@@ -32,7 +32,7 @@ private Map<String, Long> fileName;
 		
 		for (Entry<String, Long> entry : naturalOrder.entrySet()) {
 			System.out.println(entry.getKey() + ": " + entry.getValue()); //this statement prints out my keys and values
-		     result.write(entry.getKey() + ":" + entry.getValue());
+		     result.write(entry.getKey() + ":"+ "/n" + entry.getValue());
 		             
 		 }
 
