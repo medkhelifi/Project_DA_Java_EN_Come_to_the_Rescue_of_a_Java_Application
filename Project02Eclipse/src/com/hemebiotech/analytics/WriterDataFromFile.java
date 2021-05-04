@@ -32,7 +32,7 @@ private Map<String, Long> fileName;
 		
 		for (Entry<String, Long> entry : naturalOrder.entrySet()) {
 			System.out.println(entry.getKey() + ": " + entry.getValue()); //this statement prints out my keys and values
-		     result.write(entry.getKey() + ":"+ "/n" + entry.getValue());
+		     result.write(entry.getKey() + ":"+ "\n" + entry.getValue());
 		             
 		 }
 
