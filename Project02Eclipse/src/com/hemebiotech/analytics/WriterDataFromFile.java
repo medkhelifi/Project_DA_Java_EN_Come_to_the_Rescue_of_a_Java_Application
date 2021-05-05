@@ -9,15 +9,18 @@ import java.util.Map.Entry;
 
 
 
+
 public class WriterDataFromFile implements ISymptomWriter {
 
 		
 	
-private Map<String, Long> fileName;
+private Map<String, Long> mapName;
 	
-	public WriterDataFromFile(Map<String, Long> fileName) {
+/** @param mapName a Map<String Long> with symptoms and symptoms's occurrences*/
 
-	this.fileName= fileName ;
+	public WriterDataFromFile(Map<String, Long> mapName) {
+
+	this.mapName= mapName ;
 
 	}
 	
@@ -26,13 +29,13 @@ private Map<String, Long> fileName;
 	@Override
 	public FileWriter Writer() throws IOException {
 		
-	TreeMap<String, Long > naturalOrder = new TreeMap<String, Long>(fileName);
+	
 		
 	  FileWriter result = new FileWriter("result.out");
 		
-		for (Entry<String, Long> entry : naturalOrder.entrySet()) {
+		for (Entry<String, Long> entry : mapName.entrySet()) {
 			System.out.println(entry.getKey() + ": " + entry.getValue()); //this statement prints out my keys and values
-		     result.write(entry.getKey() + ":" + entry.getValue()+ "\n");
+		     result.write(entry.getKey() + " : " + entry.getValue()+ "\n"); //this statement prints out my keys and values in the file //
 		             
 		 }
 
